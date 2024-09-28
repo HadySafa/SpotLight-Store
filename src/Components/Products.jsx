@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { initializeProducts } from "../Store/Slices/products-slice"
+import { initializeProducts,defineProducts } from "../Store/Slices/products-slice"
 import { useDispatch, useSelector } from 'react-redux'
 import Product from './product'
 import { Link } from 'react-router-dom'
@@ -35,6 +35,7 @@ function Products() {
         'https://dummyjson.com/products/category/mens-watches?limit=20', 'https://dummyjson.com/products/category/sunglasses?limit=20']
 
     useEffect(() => {
+        dispatch(defineProducts())
         for (let URL of URLs) {
             fetchProducts(URL)
         }

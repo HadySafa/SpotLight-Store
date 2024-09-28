@@ -24,12 +24,12 @@ function Search() {
 
     function searchItems() {
         let results = []
-        if (products && products.length && products.length > 0) {
-            products.map((element) => {
-                if (containsSubstring(element.title, searchValue)) {
-                    results.push(element)
+        if (products.length > 0) {
+            for(let product of products){
+                if (containsSubstring(product.title, searchValue)) {
+                    results.push(product)
                 }
-            })
+            }
         }
         dispatch(setSearchResults([...results]))
     }

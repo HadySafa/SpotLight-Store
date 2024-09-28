@@ -10,13 +10,19 @@ const slice = createSlice({
     name: "Products",
     initialState,
     reducers: {
+        defineProducts(state){
+            state.products = [];
+        },
         initializeProducts(state,action){
             if(action.payload.length > 0){
-                state.products = state.products.concat([...action.payload])
+                const products = state.products;
+                const newProducts = [...action.payload];
+                const finalProducts = products.concat(newProducts)
+                state.products = finalProducts
             }
         }
     }
 })
 
 export default slice.reducer;
-export const {initializeProducts} = slice.actions;
+export const {defineProducts,initializeProducts} = slice.actions;
