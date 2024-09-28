@@ -114,7 +114,7 @@ function Search() {
                                         )
                                     }
                                 </ul>
-                                <Link onClick={handleCloseSearch} to={`/Components/search-results`}>
+                                <Link onClick={handleCloseSearch} to={`/search-results`}>
                                     <div className="relative flex items-center border-t-2 border-gray-200 text-sm text-gray-500 p-2">
                                         <p>Search for '{searchValue}'</p>
                                         <FaArrowRight className="absolute right-2" />
