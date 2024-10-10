@@ -2,7 +2,7 @@
 
 ## Description
 
-A fully functional e-commerce website designed to provide users with a seamless shopping experience, where they can browse and search for products, and manage the cart.
+A functional e-commerce website designed to provide users with a perfect shopping experience, where they can browse and search for products, manage cart items by adding products, adjusting quantities, and tracking selections. 
 
 ## Technologies Used
 - ReactJS
